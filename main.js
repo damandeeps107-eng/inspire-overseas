@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }, observerOptions);
 
-  document.querySelectorAll('.fade-up, .fade-in-up, .fade-up-enter').forEach((el) => {
+  document.querySelectorAll('.fade-up, .fade-in-up, .fade-up-enter, .animate-enter').forEach((el) => {
     animationObserver.observe(el);
   });
 
