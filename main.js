@@ -1,4 +1,4 @@
-// S Global Educators - Main JS File
+// StudyLeap Overseas - Main JS File
 
 document.addEventListener("DOMContentLoaded", function() {
   // 1. Intersection Observer for fade-in animations
