@@ -102,19 +102,19 @@ document.addEventListener("DOMContentLoaded", function() {
     if (textContainer && hTitle && hSubtitle) {
       textContainer.style.opacity = "0";
       textContainer.style.transform = "translateY(12px)";
-      textContainer.style.transition = "opacity 0.4s ease-in-out, transform 0.4s ease-in-out";
+      textContainer.style.transition = "opacity 0.3s ease-in-out, transform 0.3s ease-in-out";
       
       setTimeout(() => {
         hTitle.innerHTML = carouselContent[currentHeroSlide].title;
         hSubtitle.innerHTML = carouselContent[currentHeroSlide].subtitle;
         textContainer.style.opacity = "1";
         textContainer.style.transform = "translateY(0)";
-      }, 400);
+      }, 300);
     }
   }
 
   if (bgSlides.length > 0) {
-    setInterval(advanceHeroSlide, 6000); // Change slide every 6 seconds
+    setInterval(advanceHeroSlide, 4500); // Change slide every 6 seconds
   }
 
 

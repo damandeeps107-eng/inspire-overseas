@@ -182,5 +182,5 @@ h1, h2, h3, h4, h5, h6, .font-headline {
 }
 
 .flying-plane {
-  animation: planeGlide 24s infinite linear;
+  animation: planeGlide 16s infinite linear;
 }
