@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
   const carouselContent = [
     {
-      title: 'Fly High with <br/><span class="text-[#0ea5e9]">StudyLeap Overseas</span>',
+      title: 'Fly High with <br/><span class="text-[#f97316]">StudyLeap Overseas</span>',
       subtitle: 'Your Trusted Visa &amp; Immigration Partner for Top Canadian Colleges.'
     },
     {
@@ -82,11 +82,11 @@ document.addEventListener("DOMContentLoaded", function() {
       subtitle: 'Fast-Track subclass 500 Student Visas for Australian Universities.'
     },
     {
-      title: 'Take Off to Your <br/><span class="text-[#0ea5e9]">Dream Destination</span>',
+      title: 'Take Off to Your <br/><span class="text-[#f97316]">Dream Destination</span>',
       subtitle: 'Hassle-free Tourist &amp; Visitor Visa processing for destinations worldwide.'
     },
     {
-      title: 'Join Thousands of <br/><span class="text-[#0ea5e9]">Successful Students</span>',
+      title: 'Join Thousands of <br/><span class="text-[#f97316]">Successful Students</span>',
       subtitle: 'Expert counseling to secure admissions and visas at top-tier universities.'
     }
   ];
