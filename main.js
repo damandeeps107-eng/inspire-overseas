@@ -80,6 +80,14 @@ document.addEventListener("DOMContentLoaded", function() {
     {
       title: 'Study &amp; Work <br/><span class="text-[#f97316]">in Australia</span>',
       subtitle: 'Fast-Track subclass 500 Student Visas for Australian Universities.'
+    },
+    {
+      title: 'Take Off to Your <br/><span class="text-[#f97316]">Dream Destination</span>',
+      subtitle: 'Hassle-free Tourist &amp; Visitor Visa processing for destinations worldwide.'
+    },
+    {
+      title: 'Join Thousands of <br/><span class="text-[#f97316]">Successful Students</span>',
+      subtitle: 'Expert counseling to secure admissions and visas at top-tier universities.'
     }
   ];
 
