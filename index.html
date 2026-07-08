@@ -162,11 +162,28 @@
     <main class="pt-[116px] flex-grow">
         
         <!-- 1. HERO SECTION -->
-        <section id="home" class="relative min-h-[92vh] flex items-center justify-center overflow-hidden fade-up bg-cover bg-center" style="background-image: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=1920&q=80');">
-            <!-- Overlay Vignette -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-black/35 pointer-events-none"></div>
+        <section id="home" class="relative min-h-[92vh] flex items-center justify-center overflow-hidden fade-up">
+            <!-- Background Carousel Slides -->
+            <div class="absolute inset-0 z-0">
+                <!-- Slide 1 (Canada) -->
+                <div class="hero-bg-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-100" style="background-image: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?auto=format&fit=crop&w=1920&q=80');" data-slide="0"></div>
+                <!-- Slide 2 (USA) -->
+                <div class="hero-bg-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=1920&q=80');" data-slide="1"></div>
+                <!-- Slide 3 (Australia) -->
+                <div class="hero-bg-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0" style="background-image: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1920&q=80');" data-slide="2"></div>
+            </div>
             
-            <div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
+            <!-- Vignette Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-black/35 pointer-events-none z-10"></div>
+            
+            <!-- CSS Animated Flying Plane -->
+            <div class="absolute inset-0 overflow-hidden pointer-events-none z-10">
+                <div class="flying-plane absolute text-white/10 select-none">
+                    <span class="material-symbols-outlined text-[100px] md:text-[140px] rotate-45">flight</span>
+                </div>
+            </div>
+
+            <div class="relative z-20 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     
                     <!-- Left Column: Copy & Badges -->
@@ -177,13 +194,16 @@
                             <span class="text-xs uppercase tracking-wider font-semibold">India's Most Trusted Visa Consultants</span>
                         </div>
                         
-                        <h1 class="font-headline text-[38px] md:text-[56px] leading-[1.1] font-bold text-white mb-6 drop-shadow-lg font-bold">
-                            Fly High with <br/><span class="text-[#f97316]">StudyLeap Overseas</span>
-                        </h1>
-                        
-                        <p class="font-headline text-lg md:text-xl text-slate-100 mb-8 font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
-                            Your Trusted Visa &amp; Immigration Consultant in <span class="text-[#f97316] font-semibold border-b-2 border-[#f97316]">Chandigarh, India</span>
-                        </p>
+                        <!-- Animated Content Container -->
+                        <div class="hero-text-container transition-all duration-500 ease-in-out">
+                            <h1 class="font-headline text-[38px] md:text-[56px] leading-[1.1] font-bold text-white mb-6 drop-shadow-lg" id="hero-title">
+                                Fly High with <br/><span class="text-[#f97316]">StudyLeap Overseas</span>
+                            </h1>
+                            
+                            <p class="font-headline text-lg md:text-xl text-slate-100 mb-8 font-medium leading-relaxed max-w-xl mx-auto lg:mx-0" id="hero-subtitle">
+                                Your Trusted Visa &amp; Immigration Partner for Top Canadian Colleges.
+                            </p>
+                        </div>
                         
                         <p class="font-body text-body-md text-slate-200 max-w-lg mx-auto lg:mx-0 mb-10 leading-relaxed">
                             Complete end-to-end support for study permits, tourist visas, admissions, SOP verification, and quick education loan approvals to power your global career.
@@ -262,7 +282,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Stats Bar Below Hero -->
         <div class="bg-slate-950 text-white py-6 px-margin-mobile md:px-margin-desktop border-b border-slate-900 relative z-10 shadow-lg">
             <div class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">

@@ -62,6 +62,62 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+
+  // 5. Hero Carousel & Text Animation
+  const bgSlides = document.querySelectorAll(".hero-bg-slide");
+  const hTitle = document.getElementById("hero-title");
+  const hSubtitle = document.getElementById("hero-subtitle");
+  
+  const carouselContent = [
+    {
+      title: 'Fly High with <br/><span class="text-[#f97316]">StudyLeap Overseas</span>',
+      subtitle: 'Your Trusted Visa &amp; Immigration Partner for Top Canadian Colleges.'
+    },
+    {
+      title: 'Achieve Your <br/><span class="text-[#f97316]">USA Dream</span>',
+      subtitle: 'Seamless F-1 Student Visas &amp; University Admissions in the United States.'
+    },
+    {
+      title: 'Study &amp; Work <br/><span class="text-[#f97316]">in Australia</span>',
+      subtitle: 'Fast-Track subclass 500 Student Visas for Australian Universities.'
+    }
+  ];
+
+  let currentHeroSlide = 0;
+  
+  function advanceHeroSlide() {
+    if (bgSlides.length === 0) return;
+    
+    // Hide current bg slide
+    bgSlides[currentHeroSlide].classList.replace("opacity-100", "opacity-0");
+    
+    // Increment slide
+    currentHeroSlide = (currentHeroSlide + 1) % bgSlides.length;
+    
+    // Show next bg slide
+    bgSlides[currentHeroSlide].classList.replace("opacity-0", "opacity-100");
+    
+    // Animate text transition
+    const textContainer = document.querySelector(".hero-text-container");
+    if (textContainer && hTitle && hSubtitle) {
+      textContainer.style.opacity = "0";
+      textContainer.style.transform = "translateY(12px)";
+      textContainer.style.transition = "opacity 0.4s ease-in-out, transform 0.4s ease-in-out";
+      
+      setTimeout(() => {
+        hTitle.innerHTML = carouselContent[currentHeroSlide].title;
+        hSubtitle.innerHTML = carouselContent[currentHeroSlide].subtitle;
+        textContainer.style.opacity = "1";
+        textContainer.style.transform = "translateY(0)";
+      }, 400);
+    }
+  }
+
+  if (bgSlides.length > 0) {
+    setInterval(advanceHeroSlide, 6000); // Change slide every 6 seconds
+  }
+
+
   // 4. Contact Form Submission Toast Handler
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
