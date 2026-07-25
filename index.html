@@ -908,58 +908,87 @@
 </div>
 <!-- Right Column: Form -->
 <div class="lg:col-span-7 fade-up-enter" style="transition-delay: 200ms;">
-<div class="glass-card rounded-xl p-8 h-full bg-surface">
-<h2 class="font-headline text-headline-lg text-primary mb-2">Send a Message</h2>
-<p class="font-body text-body-md text-on-surface-variant mb-8">Fill out the form below and we'll get back to you shortly.</p>
-<form id="contact-form" action="#" class="space-y-6" method="POST">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<label class="block font-label-md text-on-surface mb-2" for="fullName">Full Name</label>
-<input class="w-full rounded-md border-outline-variant bg-surface-bright focus:border-primary focus:ring-primary shadow-sm font-body text-body-md py-3" id="fullName" name="fullName" placeholder="John Doe" required="" type="text"/>
-</div>
-<div>
-<label class="block font-label-md text-on-surface mb-2" for="email">Email Address</label>
-<input class="w-full rounded-md border-outline-variant bg-surface-bright focus:border-primary focus:ring-primary shadow-sm font-body text-body-md py-3" id="email" name="email" placeholder="john@example.com" required="" type="email"/>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<label class="block font-label-md text-on-surface mb-2" for="phone">Phone Number</label>
-<input class="w-full rounded-md border-outline-variant bg-surface-bright focus:border-primary focus:ring-primary shadow-sm font-body text-body-md py-3" id="phone" name="phone" placeholder="+1 (555) 000-0000" required="" type="tel"/>
-</div>
-<div>
-<label class="block font-label-md text-on-surface mb-2" for="destination">Target Destination</label>
-<select class="w-full rounded-md border-outline-variant bg-surface-bright focus:border-primary focus:ring-primary shadow-sm font-body text-body-md py-3 text-on-surface-variant" id="destination" name="destination">
-<option disabled="" selected="" value="">Select Destination</option>
-<option value="canada">Canada</option>
-<option value="usa">USA</option>
-<option value="uk">UK</option>
-<option value="australia">Australia</option>
-<option value="new_zealand">New Zealand</option>
-<option value="europe">Europe/Schengen</option>
-</select>
-</div>
-</div>
-<div>
-<label class="block font-label-md text-on-surface mb-2" for="visaType">Visa Type</label>
-<select class="w-full rounded-md border-outline-variant bg-surface-bright focus:border-primary focus:ring-primary shadow-sm font-body text-body-md py-3 text-on-surface-variant" id="visaType" name="visaType">
-<option disabled="" selected="" value="">Select Visa Type</option>
-<option value="study">Study Visa</option>
-<option value="tourist">Tourist Visa</option>
-<option value="visitor">Visitor Visa</option>
-<option value="admissions">Admissions</option>
-<option value="sop">SOP/Documentation</option>
-</select>
-</div>
-<div>
-<label class="block font-label-md text-on-surface mb-2" for="message">Message</label>
-<textarea class="w-full rounded-md border-outline-variant bg-surface-bright focus:border-primary focus:ring-primary shadow-sm font-body text-body-md py-3" id="message" name="message" placeholder="Tell us about your requirements..." rows="4"></textarea>
-</div>
-<button class="w-full bg-secondary text-on-secondary font-headline text-headline-md py-4 rounded-lg hover:bg-secondary/90 transition-all active:scale-95 duration-200 shadow-md" type="submit">
-                                    Submit Inquiry
-                                </button>
-</form>
-</div>
+                <div class="glass-card rounded-3xl p-8 md:p-10 border border-white/50 bg-white/95 shadow-xl shadow-blue-900/5 relative overflow-hidden">
+                    <!-- Background Glow Shapes -->
+                    <div class="absolute -top-24 -right-24 w-48 h-48 rounded-full bg-gradient-to-br from-secondary/15 to-primary/5 blur-3xl pointer-events-none"></div>
+                    <div class="absolute -bottom-24 -left-24 w-48 h-48 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 blur-3xl pointer-events-none"></div>
+
+                    <h2 class="font-headline text-2xl md:text-3xl text-primary mb-2 font-bold relative z-10 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-secondary text-3xl">chat</span>
+                        <span>Send a Message</span>
+                    </h2>
+                    <p class="font-body text-body-md text-on-surface-variant mb-8 relative z-10">Fill out the form below and we'll get back to you shortly.</p>
+                    
+                    <form id="contact-form" action="#" class="space-y-6 relative z-10" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block font-label-md text-slate-700 font-bold mb-2 text-sm" for="fullName">Full Name</label>
+                                <div class="relative">
+                                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl pointer-events-none">person</span>
+                                    <input class="w-full pl-12 pr-4 rounded-xl border border-slate-200 bg-slate-50/50 focus:border-secondary focus:ring-4 focus:ring-secondary/10 shadow-sm font-body text-body-md py-3.5 transition-all duration-200" id="fullName" name="fullName" placeholder="Enter your name" required="" type="text"/>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block font-label-md text-slate-700 font-bold mb-2 text-sm" for="email">Email Address</label>
+                                <div class="relative">
+                                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl pointer-events-none">mail</span>
+                                    <input class="w-full pl-12 pr-4 rounded-xl border border-slate-200 bg-slate-50/50 focus:border-secondary focus:ring-4 focus:ring-secondary/10 shadow-sm font-body text-body-md py-3.5 transition-all duration-200" id="email" name="email" placeholder="Enter your email" required="" type="email"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block font-label-md text-slate-700 font-bold mb-2 text-sm" for="phone">Phone Number</label>
+                                <div class="relative">
+                                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl pointer-events-none">call</span>
+                                    <input class="w-full pl-12 pr-4 rounded-xl border border-slate-200 bg-slate-50/50 focus:border-secondary focus:ring-4 focus:ring-secondary/10 shadow-sm font-body text-body-md py-3.5 transition-all duration-200" id="phone" name="phone" placeholder="Enter phone number" required="" type="tel"/>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block font-label-md text-slate-700 font-bold mb-2 text-sm" for="destination">Target Destination</label>
+                                <div class="relative">
+                                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl pointer-events-none">explore</span>
+                                    <select class="w-full pl-12 pr-4 rounded-xl border border-slate-200 bg-slate-50/50 focus:border-secondary focus:ring-4 focus:ring-secondary/10 shadow-sm font-body text-body-md py-3.5 transition-all duration-200 text-slate-700 appearance-none" id="destination" name="destination">
+                                        <option disabled="" selected="" value="">Select Destination</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="australia">Australia</option>
+                                        <option value="uk">UK</option>
+                                        <option value="new_zealand">New Zealand</option>
+                                        <option value="europe">Europe/Schengen</option>
+                                    </select>
+                                    <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">arrow_drop_down</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block font-label-md text-slate-700 font-bold mb-2 text-sm" for="visaType">Visa Type / Service</label>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl pointer-events-none">assignment_ind</span>
+                                <select class="w-full pl-12 pr-4 rounded-xl border border-slate-200 bg-slate-50/50 focus:border-secondary focus:ring-4 focus:ring-secondary/10 shadow-sm font-body text-body-md py-3.5 transition-all duration-200 text-slate-700 appearance-none" id="visaType" name="visaType">
+                                    <option disabled="" selected="" value="">Select Visa Type</option>
+                                    <option value="study">Study Visa</option>
+                                    <option value="tourist">Tourist Visa</option>
+                                    <option value="visitor">Visitor Visa</option>
+                                    <option value="admissions">Admissions</option>
+                                    <option value="ielts_pte">IELTS &amp; PTE Coaching</option>
+                                    <option value="spouse_visa">Spouse Visa</option>
+                                </select>
+                                <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">arrow_drop_down</span>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block font-label-md text-slate-700 font-bold mb-2 text-sm" for="message">Message</label>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-4 top-4 text-slate-400 text-xl pointer-events-none">edit_note</span>
+                                <textarea class="w-full pl-12 pr-4 rounded-xl border border-slate-200 bg-slate-50/50 focus:border-secondary focus:ring-4 focus:ring-secondary/10 shadow-sm font-body text-body-md py-3.5 transition-all duration-200" id="message" name="message" placeholder="Tell us about your study/travel requirements..." rows="4"></textarea>
+                            </div>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-secondary to-primary text-white font-headline text-headline-md py-4 rounded-xl hover:opacity-95 hover:shadow-lg transition-all active:scale-[0.98] duration-200 font-bold shadow-md shadow-secondary/20 flex items-center justify-center gap-2" type="submit">
+                            <span class="material-symbols-outlined">send</span>
+                            <span>Submit Inquiry</span>
+                        </button>
+                    </form>
+                </div>
 </div>
 </div>
 </div>
