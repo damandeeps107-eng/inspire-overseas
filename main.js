@@ -1,4 +1,4 @@
-// StudyLeap Overseas - Main JS File
+// Inspire Overseas Consultant - Main JS File
 
 document.addEventListener("DOMContentLoaded", function() {
   // 1. Intersection Observer for fade-in animations
@@ -60,6 +60,15 @@ document.addEventListener("DOMContentLoaded", function() {
         icon.textContent = mobileMenu.classList.contains("hidden") ? "menu" : "close";
       }
     });
+
+    // Close mobile menu when a link is clicked
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        const icon = mobileMenuToggle.querySelector("span");
+        if (icon) icon.textContent = "menu";
+      });
+    });
   }
 
 
@@ -70,24 +79,24 @@ document.addEventListener("DOMContentLoaded", function() {
   
   const carouselContent = [
     {
-      title: 'Fly High with <br/><span class="text-[#f97316]">StudyLeap Overseas</span>',
-      subtitle: 'Your Trusted Visa &amp; Immigration Partner for Top Canadian Colleges.'
+      title: 'Fly High with <br/><span class="text-secondary">Inspire Overseas</span>',
+      subtitle: 'Your Trusted Visa &amp; Immigration Partner for Canada, USA, UK &amp; Europe.'
     },
     {
-      title: 'Achieve Your <br/><span class="text-[#f97316]">USA Dream</span>',
-      subtitle: 'Seamless F-1 Student Visas &amp; University Admissions in the United States.'
+      title: 'Achieve Your <br/><span class="text-secondary">Study Abroad Dreams</span>',
+      subtitle: 'Seamless admissions and study visa guidance for top global universities.'
     },
     {
-      title: 'Study &amp; Work <br/><span class="text-[#f97316]">in Australia</span>',
-      subtitle: 'Fast-Track subclass 500 Student Visas for Australian Universities.'
+      title: 'Explore Global <br/><span class="text-secondary">Opportunities</span>',
+      subtitle: 'Hassle-free Tourist Visas, Visitor Visas, and Work Permits.'
     },
     {
-      title: 'Take Off to Your <br/><span class="text-[#f97316]">Dream Destination</span>',
-      subtitle: 'Hassle-free Tourist &amp; Visitor Visa processing for destinations worldwide.'
+      title: 'Expert IELTS &amp; <br/><span class="text-secondary">PTE Coaching</span>',
+      subtitle: 'Score high in IELTS/PTE with our expert certified trainers in Dhanaula.'
     },
     {
-      title: 'Join Thousands of <br/><span class="text-[#f97316]">Successful Students</span>',
-      subtitle: 'Expert counseling to secure admissions and visas at top-tier universities.'
+      title: 'Your Future <br/><span class="text-secondary">Starts Here</span>',
+      subtitle: 'Comprehensive profile evaluation, SOP guidance, and visa documentation support.'
     }
   ];
 
