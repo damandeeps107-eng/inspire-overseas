@@ -35,18 +35,18 @@ h1, h2, h3, h4, h5, h6, .font-headline {
 
 /* Glassmorphism Cards */
 .glass-card {
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(240, 249, 255, 0.85); /* Premium soft sky-blue glass background */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   box-shadow: 0 15px 30px -10px rgba(15, 76, 129, 0.1), 
               0 5px 15px -5px rgba(2, 132, 199, 0.05);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover {
-  background: rgba(255, 255, 255, 0.7);
-  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(240, 249, 255, 0.95);
+  border-color: rgba(255, 255, 255, 0.75);
   transform: translateY(-6px);
   box-shadow: 0 25px 40px -15px rgba(15, 76, 129, 0.15), 
               0 10px 20px -10px rgba(2, 132, 199, 0.1);
